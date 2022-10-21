@@ -1,0 +1,16 @@
+C:\Users\amgoo\source\repos\GimnacioApp\bin\Debug\GimnacioApp.exe.config
+C:\Users\amgoo\source\repos\GimnacioApp\bin\Debug\GimnacioApp.exe
+C:\Users\amgoo\source\repos\GimnacioApp\bin\Debug\GimnacioApp.pdb
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Properties.Resources.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.csproj.GenerateResource.cache
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.csproj.CoreCompileInputs.cache
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.exe
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.pdb
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Form2.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Form3.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Form4.resources
+C:\Users\amgoo\source\repos\GimnacioApp\bin\Debug\Resources\programador.png
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.LogIN.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Main.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Register.resources
+C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Usuarios.resources
