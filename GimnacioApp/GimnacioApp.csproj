@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\Conexion.cs" />
+    <Compile Include="Model\AlumnoModel.cs" />
+    <Compile Include="Controller\AlumnoControler.cs" />
     <Compile Include="View\LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +138,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\programador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

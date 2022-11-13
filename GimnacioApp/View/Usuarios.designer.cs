@@ -31,14 +31,14 @@ namespace GimnacioApp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonCuenta = new System.Windows.Forms.Button();
             this.buttonEliminar = new System.Windows.Forms.Button();
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonIngresos = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxBusqueda = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +54,29 @@ namespace GimnacioApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 391);
             this.panel1.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 20);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "Buscar";
+            // 
+            // textBoxBusqueda
+            // 
+            this.textBoxBusqueda.BackColor = System.Drawing.Color.FloralWhite;
+            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBoxBusqueda.ForeColor = System.Drawing.Color.Black;
+            this.textBoxBusqueda.Location = new System.Drawing.Point(95, 9);
+            this.textBoxBusqueda.Name = "textBoxBusqueda";
+            this.textBoxBusqueda.Size = new System.Drawing.Size(216, 20);
+            this.textBoxBusqueda.TabIndex = 12;
             // 
             // panel2
             // 
@@ -149,29 +172,6 @@ namespace GimnacioApp
             this.buttonAgregar.Text = "Nuevo";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FloralWhite;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 20);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "Buscar";
-            // 
-            // textBoxBusqueda
-            // 
-            this.textBoxBusqueda.BackColor = System.Drawing.Color.FloralWhite;
-            this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBusqueda.ForeColor = System.Drawing.Color.FloralWhite;
-            this.textBoxBusqueda.Location = new System.Drawing.Point(95, 9);
-            this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(216, 20);
-            this.textBoxBusqueda.TabIndex = 12;
-            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,7 +179,6 @@ namespace GimnacioApp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(744, 391);
             this.Controls.Add(this.panel1);
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";

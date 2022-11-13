@@ -14,3 +14,20 @@ C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.LogIN.resources
 C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Main.resources
 C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Register.resources
 C:\Users\amgoo\source\repos\GimnacioApp\obj\Debug\GimnacioApp.Usuarios.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.csproj.AssemblyReference.cache
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.LogIN.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Form2.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Form3.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Form4.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Main.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Properties.Resources.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Register.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.Usuarios.resources
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.csproj.GenerateResource.cache
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.csproj.CoreCompileInputs.cache
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.exe
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.pdb
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\Resources\programador.png
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.exe.config
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.exe
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.pdb
