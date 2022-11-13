@@ -39,16 +39,13 @@ namespace GimnacioApp
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonIngresos = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxBusqueda);
             this.panel1.Controls.Add(this.panel2);
@@ -75,7 +72,7 @@ namespace GimnacioApp
             // 
             this.textBoxBusqueda.BackColor = System.Drawing.Color.FloralWhite;
             this.textBoxBusqueda.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxBusqueda.ForeColor = System.Drawing.Color.FloralWhite;
+            this.textBoxBusqueda.ForeColor = System.Drawing.Color.Black;
             this.textBoxBusqueda.Location = new System.Drawing.Point(95, 9);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
             this.textBoxBusqueda.Size = new System.Drawing.Size(216, 20);
@@ -175,14 +172,6 @@ namespace GimnacioApp
             this.buttonAgregar.Text = "Nuevo";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(716, 305);
-            this.dataGridView1.TabIndex = 14;
-            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,12 +183,10 @@ namespace GimnacioApp
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,7 +202,6 @@ namespace GimnacioApp
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonIngresos;
         private System.Windows.Forms.Button buttonAgregar;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

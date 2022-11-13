@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\Dao\DBContext.cs" />
-    <Compile Include="Model\Dao\UsuarioDao.cs" />
+    <Compile Include="Controller\Conexion.cs" />
+    <Compile Include="Model\AlumnoModel.cs" />
+    <Compile Include="Controller\AlumnoControler.cs" />
     <Compile Include="View\LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,7 +86,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\Dto\ObjetoUsuario.cs" />
+    <Compile Include="Model\ObjetoUsuario.cs" />
     <Compile Include="View\Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,9 +138,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\programador.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
