@@ -39,13 +39,16 @@ namespace GimnacioApp
             this.buttonModificar = new System.Windows.Forms.Button();
             this.buttonIngresos = new System.Windows.Forms.Button();
             this.buttonAgregar = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBoxBusqueda);
             this.panel1.Controls.Add(this.panel2);
@@ -172,6 +175,14 @@ namespace GimnacioApp
             this.buttonAgregar.Text = "Nuevo";
             this.buttonAgregar.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(14, 36);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(716, 305);
+            this.dataGridView1.TabIndex = 15;
+            // 
             // Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +198,7 @@ namespace GimnacioApp
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -202,6 +214,7 @@ namespace GimnacioApp
         private System.Windows.Forms.Button buttonModificar;
         private System.Windows.Forms.Button buttonIngresos;
         private System.Windows.Forms.Button buttonAgregar;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

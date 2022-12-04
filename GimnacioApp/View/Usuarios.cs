@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GimnacioApp.Model.Dao;
+using GimnacioApp.Controller;
+
 
 namespace GimnacioApp
 {
@@ -25,7 +26,7 @@ namespace GimnacioApp
 
         private void VerRegistros(string condicion)
         {
-            UsuarioDao dao = new UsuarioDao();
+            UsuarioController dao = new UsuarioController();
             dataGridView1.DataSource = dao.verRegistros(condicion);
         }
     }

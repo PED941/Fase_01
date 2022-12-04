@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\Conexion.cs" />
+    <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Model\AlumnoModel.cs" />
     <Compile Include="Controller\AlumnoControler.cs" />
+    <Compile Include="Model\ObjetoUsuario.cs" />
     <Compile Include="View\LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,7 +88,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Model\ObjetoUsuario.cs" />
     <Compile Include="View\Register.cs">
       <SubType>Form</SubType>
     </Compile>
