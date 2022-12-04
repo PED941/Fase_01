@@ -9,6 +9,6 @@ namespace GimnacioApp.Controller
 {
     public class Conexion
     {
-        protected SqlConnection conexion = new SqlConnection("Server=DESKTOP-J307FUC/SQLEXPRESS;DataBase=Fase1_test; Integrated Security=true");
+        protected SqlConnection conexion = new SqlConnection("Server=DESKTOP-J307FUC\\SQLEXPRESS;DataBase=ProyectoPED; Integrated Security=true");
     }
 }

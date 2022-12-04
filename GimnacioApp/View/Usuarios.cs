@@ -17,10 +17,6 @@ namespace GimnacioApp
         public Usuarios()
         {
             InitializeComponent();
-        }
-
-        private void Usuarios_Load(object sender, EventArgs e)
-        {
             VerRegistros("");
         }
 
@@ -28,6 +24,11 @@ namespace GimnacioApp
         {
             UsuarioController dao = new UsuarioController();
             dataGridView1.DataSource = dao.verRegistros(condicion);
+        }
+
+        private void buttonAgregar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

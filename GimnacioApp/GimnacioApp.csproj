@@ -51,6 +51,12 @@
     <Compile Include="Model\AlumnoModel.cs" />
     <Compile Include="Controller\AlumnoControler.cs" />
     <Compile Include="Model\ObjetoUsuario.cs" />
+    <Compile Include="View\CrearAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\CrearAlumno.Designer.cs">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LogIN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <Compile Include="View\Usuarios.designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\CrearAlumno.resx">
+      <DependentUpon>CrearAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LogIN.resx">
       <DependentUpon>LogIN.cs</DependentUpon>
     </EmbeddedResource>

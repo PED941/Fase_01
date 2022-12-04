@@ -14,7 +14,7 @@ namespace GimnacioApp.Controller
         
         SqlCommand Comando = new SqlCommand();
 
-        public void VerRegistro(AlumnoModel alumno)
+        public void ingresarRegistro(AlumnoModel alumno)
         {
             Comando.Connection = conexion;
             Comando.CommandText = "insert into alumnos values ('"+ alumno.Carnet + "','" + alumno.Nombres + "','" + alumno.Apellidos + "','" + alumno.Carrera + "','" + alumno.Contrasena + "')";
