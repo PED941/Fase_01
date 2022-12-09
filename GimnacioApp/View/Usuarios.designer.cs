@@ -134,6 +134,7 @@ namespace GimnacioApp
             this.buttonEliminar.TabIndex = 5;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = false;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
@@ -150,6 +151,7 @@ namespace GimnacioApp
             this.buttonModificar.TabIndex = 4;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = false;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonIngresos
             // 
@@ -166,6 +168,7 @@ namespace GimnacioApp
             this.buttonIngresos.TabIndex = 2;
             this.buttonIngresos.Text = "Listado de Ingresos";
             this.buttonIngresos.UseVisualStyleBackColor = false;
+            this.buttonIngresos.Click += new System.EventHandler(this.buttonIngresos_Click);
             // 
             // buttonAgregar
             // 

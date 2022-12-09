@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GimnacioApp.Model
 {
-    class ObjetoUsuario
+    public class ObjetoUsuario
     {
         private int numero;
         private string nombre;

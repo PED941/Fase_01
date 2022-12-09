@@ -20,20 +20,7 @@ namespace GimnacioApp.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ObjetoUsuario usuario = new ObjetoUsuario();
-            usuario.Nombre = textBox1.ToString();
-            usuario.Direccion = textBox2.ToString();
-            usuario.Profesion = textBox2.ToString();
-            usuario.Casa = textBox2.ToString();
-            usuario.Trabajo = textBox2.ToString();
-            usuario.Celular = textBox2.ToString();
-            usuario.FechaNacimiento = textBox2.ToString();
-            usuario.FechaInscripcion = textBox2.ToString();
-            usuario.Email = textBox2.ToString();
-            usuario.Ingreso = textBox2.ToString();
-            usuario.Pago = textBox2.ToString();
-            usuario.Activo = true;
-            usuario.DiasExtra = int.Parse(textBox2.ToString());
+           
         }
     }
 }

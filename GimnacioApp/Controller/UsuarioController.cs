@@ -1,6 +1,8 @@
 ﻿using GimnacioApp.Model;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -14,16 +16,19 @@ namespace GimnacioApp.Controller
         //metodos crud
         SqlDataReader leerFilas;
         SqlCommand comando = new SqlCommand();
-        public List<ObjetoUsuario> verRegistros(string condicion)
+        public BindingList<ObjetoUsuario> verRegistros()
         {
             comando.Connection = conexion;
-            comando.CommandText = "select * from [dbo].[cliente]";
+            comando.CommandText = "select [cli_numero],[cli_nombre],[cli_direccion],[cli_profesion] ,[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras] from [dbo].[cliente]";
 
-            conexion.Open();
+            if (conexion.State == ConnectionState.Closed)
+            {
+                conexion.Open();
+            }
 
             leerFilas = comando.ExecuteReader();
 
-            List<ObjetoUsuario> listaProvisional = new List<ObjetoUsuario>();
+            BindingList<ObjetoUsuario> listaProvisional = new BindingList<ObjetoUsuario>();
             while (leerFilas.Read())
             {
                 listaProvisional.Add(new ObjetoUsuario
@@ -49,12 +54,135 @@ namespace GimnacioApp.Controller
 
             return listaProvisional;
         }
+
+        public string eliminarRegistro(ObjetoUsuario usuario)
+        {
+            String mensaje;
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "DELETE [dbo].[cliente] WHERE [cli_numero]=@Numero AND [cli_activo]=@Activo";
+            comando.Parameters.AddWithValue("@Activo", 0);
+            comando.Parameters.AddWithValue("@Numero", usuario.Numero);
+            try
+            {
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.Open();
+                }
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                mensaje = "Eliminacion Completada";
+
+            }
+            catch (SqlException e)
+            {
+                mensaje = e.Message.ToString();
+            }
+            return mensaje;
+        }
+
+        public string modificarRegistro(ObjetoUsuario usuario)
+        {
+            String mensaje;
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "UPDATE [dbo].[cliente] SET [cli_nombre]=@Nombre,[cli_direccion]=@Direccion,[cli_profesion]=@Profesion,[cli_casa]=@Casa,[cli_trabajo]=@Trabajo,[cli_celular]=@Celular,[cli_nac]=@FechaNacimiento,[cli_inscripcion]=@FechaInscripcion,[cli_email]=@Email,[cli_ingreso]=@Ingreso,[cli_pago]=@Pago,[cli_activo]=@Activo,[cli_diasextras]=@DiasExtra WHERE [cli_numero]=@Numero";
+            comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+            comando.Parameters.AddWithValue("@Direccion", usuario.Direccion);
+            comando.Parameters.AddWithValue("@Profesion", usuario.Profesion);
+            comando.Parameters.AddWithValue("@Casa", usuario.Casa);
+            comando.Parameters.AddWithValue("@Trabajo", usuario.Trabajo);
+            comando.Parameters.AddWithValue("@Celular", usuario.Celular);
+            comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);
+            comando.Parameters.AddWithValue("@FechaInscripcion", usuario.FechaInscripcion);
+            comando.Parameters.AddWithValue("@Email", usuario.Email);
+            comando.Parameters.AddWithValue("@Ingreso", usuario.Ingreso);
+            comando.Parameters.AddWithValue("@Pago", usuario.Pago);
+            comando.Parameters.AddWithValue("@Activo", usuario.Activo);
+            comando.Parameters.AddWithValue("@DiasExtra", usuario.DiasExtra);
+            comando.Parameters.AddWithValue("@Numero", usuario.Numero);
+            try
+            {
+                if (conexion.State == ConnectionState.Closed) { 
+                    conexion.Open();
+                }
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                mensaje = "Modificacion Completada";
+
+            }
+            catch (SqlException e)
+            {
+                mensaje = e.Message.ToString();
+            }
+            return mensaje;
+        }
+
         public string crearRegistro(ObjetoUsuario usuario)
         {
+            String mensaje;
             comando.Connection = conexion;
-            comando.CommandText = "INSERT INTO [dbo].[cliente] VALUES (" + usuario.Nombre + "," + usuario.Direccion + "," + usuario.Profesion + "," + usuario.Casa + " ," + usuario.Trabajo + "," + usuario.Celular + "," + usuario.FechaNacimiento + "," + usuario.FechaInscripcion + "," + usuario.Email + "," + usuario.Ingreso + "," + usuario.Pago + ", " + usuario.Activo + "," + usuario.DiasExtra + ")";
-            String mensaje = "Insersion Completada"; 
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO [dbo].[cliente] ([cli_nombre],[cli_direccion],[cli_profesion],[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras]) VALUES(@Nombre,@Direccion,@Profesion,@Casa,@Trabajo,@Celular,@FechaNacimiento,@FechaInscripcion,@Email,@Ingreso,@Pago,@Activo,@DiasExtra)";
+            comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
+            comando.Parameters.AddWithValue("@Direccion", usuario.Direccion);
+            comando.Parameters.AddWithValue("@Profesion", usuario.Profesion);
+            comando.Parameters.AddWithValue("@Casa", usuario.Casa);
+            comando.Parameters.AddWithValue("@Trabajo", usuario.Trabajo);
+            comando.Parameters.AddWithValue("@Celular", usuario.Celular);
+            comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);
+            comando.Parameters.AddWithValue("@FechaInscripcion", usuario.FechaInscripcion);
+            comando.Parameters.AddWithValue("@Email", usuario.Email);
+            comando.Parameters.AddWithValue("@Ingreso", usuario.Ingreso);
+            comando.Parameters.AddWithValue("@Pago", usuario.Pago);
+            comando.Parameters.AddWithValue("@Activo", usuario.Activo);
+            comando.Parameters.AddWithValue("@DiasExtra", usuario.DiasExtra);
+
+            try
+            {
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.Open();
+                }
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                mensaje = "Insersion Completada ";
+                
+            }catch(SqlException e)
+            {
+                mensaje = e.Message.ToString();
+            }
             return mensaje;
+        }
+
+        public BindingList<IngresosModel> verRegistros(ObjetoUsuario usuario)
+        {
+            comando.Connection = conexion;
+            comando.CommandText = "select * from [dbo].[cliente] where cliente=@NumeroUsuario";
+            comando.Parameters.AddWithValue("@NumeroUsuario", usuario.Numero);
+
+            if (conexion.State == ConnectionState.Closed)
+            {
+                conexion.Open();
+            }
+
+            leerFilas = comando.ExecuteReader();
+
+            BindingList<IngresosModel> listaProvisional = new BindingList<IngresosModel>();
+            while (leerFilas.Read())
+            {
+                listaProvisional.Add(new IngresosModel
+                {
+                    Numero = leerFilas.GetInt32(0),
+                    Cliente = leerFilas.GetString(1),
+                    Fecha = leerFilas.GetString(2),
+                    Hora = leerFilas.GetString(3)
+                });
+            }
+            leerFilas.Close();
+            conexion.Close();
+
+            return listaProvisional;
         }
 
     }

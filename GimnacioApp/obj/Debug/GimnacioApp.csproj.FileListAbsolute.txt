@@ -31,3 +31,4 @@ E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\Gimnac
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.exe.config
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.exe
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.pdb
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.View.CrearAlumno.resources

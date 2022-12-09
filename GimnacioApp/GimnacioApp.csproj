@@ -50,6 +50,7 @@
     <Compile Include="Controller\UsuarioController.cs" />
     <Compile Include="Model\AlumnoModel.cs" />
     <Compile Include="Controller\AlumnoControler.cs" />
+    <Compile Include="Model\IngresosModel.cs" />
     <Compile Include="Model\ObjetoUsuario.cs" />
     <Compile Include="View\CrearAlumno.cs">
       <SubType>Form</SubType>
@@ -135,6 +136,7 @@
     <EmbeddedResource Include="View\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\GimnacioApp.Model.ObjetoUsuario.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
