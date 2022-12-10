@@ -15,18 +15,32 @@ namespace GimnacioApp
     public partial class Form2 : Form
     {
         BindingList<IngresosModel> ingresoSource = new BindingList<IngresosModel>();
-        //ObjetoUsuario usuario = new ObjetoUsuario();
+        ObjetoUsuario userData = new ObjetoUsuario();
         UsuarioController dao = new UsuarioController();
         public Form2(ObjetoUsuario usuario)
         {
             InitializeComponent();
+            userData = usuario;
             VerRegistros(usuario);
             dataGridView1.DataSource = ingresoSource;
         }
         private void VerRegistros(ObjetoUsuario usuario)
         {
+            dataGridView1.DataSource = null;
             ingresoSource = dao.verRegistros(usuario);
+            dataGridView1.DataSource = ingresoSource;
         }
 
+        private void regUserButtom_Click(object sender, EventArgs e)
+        {
+            String mesaje = dao.crearRegistroIngreso(userData);
+            VerRegistros(userData);
+            MessageBox.Show(mesaje);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

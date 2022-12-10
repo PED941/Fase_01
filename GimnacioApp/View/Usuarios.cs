@@ -73,7 +73,8 @@ namespace GimnacioApp
 
         private void buttonIngresos_Click(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count == 1) { 
+            if (dataGridView1.SelectedRows.Count == 1)
+            {
                 usuario = (ObjetoUsuario)dataGridView1.SelectedRows[0].DataBoundItem;
                 Form2 frmClient = new Form2(usuario);
                 frmClient.WindowState = FormWindowState.Normal;
@@ -82,6 +83,16 @@ namespace GimnacioApp
             else
             {
                 MessageBox.Show("No se a seleccionado ningun cliente o se ha seleccionado mas de uno.");
+            }
+        }
+
+        private void textBoxBusqueda_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Return))
+            {
+                dataGridView1.DataSource = null;
+                usuarioSource = dao.buscarRegistros(textBoxBusqueda.Text);
+                dataGridView1.DataSource = usuarioSource;
             }
         }
     }

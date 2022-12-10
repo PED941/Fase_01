@@ -58,6 +58,48 @@ namespace GimnacioApp.Controller
             return listaProvisional;
         }
 
+        public BindingList<ObjetoUsuario> buscarRegistros(String busca)
+        {
+            SqlDataReader leerFilas;
+            comando.Connection = conexion;
+            comando.CommandText = "select [cli_numero],[cli_nombre],[cli_direccion],[cli_profesion] ,[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras] from [dbo].[cliente] where [cli_nombre] like @busca";
+            comando.Parameters.AddWithValue("@busca", "%"+busca+"%");
+            if (conexion.State == ConnectionState.Closed)
+            {
+                conexion.Open();
+            }
+
+            leerFilas = (comando.ExecuteReader());
+
+            BindingList<ObjetoUsuario> listaProvisional = new BindingList<ObjetoUsuario>();
+            while (leerFilas.Read())
+            {
+                listaProvisional.Add(new ObjetoUsuario
+                {
+                    Numero = leerFilas.GetInt32(0),
+                    Nombre = leerFilas.GetString(1),
+                    Direccion = leerFilas.GetString(2),
+                    Profesion = leerFilas.GetString(3),
+                    Casa = leerFilas.GetString(4),
+                    Trabajo = leerFilas.GetString(5),
+                    Celular = leerFilas.GetString(6),
+                    FechaNacimiento = leerFilas.GetString(7),
+                    FechaInscripcion = leerFilas.GetString(8),
+                    Email = leerFilas.GetString(9),
+                    Ingreso = leerFilas.GetString(10),
+                    Pago = leerFilas.GetString(11),
+                    Activo = (bool)leerFilas.GetSqlBoolean(12),
+                    DiasExtra = leerFilas.GetInt32(13)
+
+                });
+                comando.Parameters.Clear();
+            }
+            leerFilas.Close();
+            conexion.Close();
+            comando.Parameters.Clear();
+            return listaProvisional;
+        }
+
         public string eliminarRegistro(ObjetoUsuario usuario)
         {
             String mensaje;
@@ -126,7 +168,7 @@ namespace GimnacioApp.Controller
             String mensaje;
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
-            comando.CommandText = "INSERT INTO [dbo].[cliente] ([cli_nombre],[cli_direccion],[cli_profesion],[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras]) VALUES(@Nombre,@Direccion,@Profesion,@Casa,@Trabajo,@Celular,@FechaNacimiento,@FechaInscripcion,@Email,@Ingreso,@Pago,@Activo,@DiasExtra)";
+            comando.CommandText = "INSERT INTO [dbo].[cliente] ([cli_nombre],[cli_direccion],[cli_profesion],[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras]) VALUES(@Nombre,@Direccion,@Profesion,@Casa,@Trabajo,@Celular,@FechaNacimiento,CONVERT (Date, GETDATE()),@Email,@Ingreso,@Pago,@Activo,@DiasExtra)";
             comando.Parameters.AddWithValue("@Nombre", usuario.Nombre);
             comando.Parameters.AddWithValue("@Direccion", usuario.Direccion);
             comando.Parameters.AddWithValue("@Profesion", usuario.Profesion);
@@ -134,7 +176,7 @@ namespace GimnacioApp.Controller
             comando.Parameters.AddWithValue("@Trabajo", usuario.Trabajo);
             comando.Parameters.AddWithValue("@Celular", usuario.Celular);
             comando.Parameters.AddWithValue("@FechaNacimiento", usuario.FechaNacimiento);
-            comando.Parameters.AddWithValue("@FechaInscripcion", usuario.FechaInscripcion);
+            //comando.Parameters.AddWithValue("@FechaInscripcion", DateTime.Now.ToString());
             comando.Parameters.AddWithValue("@Email", usuario.Email);
             comando.Parameters.AddWithValue("@Ingreso", usuario.Ingreso);
             comando.Parameters.AddWithValue("@Pago", usuario.Pago);
@@ -157,6 +199,34 @@ namespace GimnacioApp.Controller
             }
             return mensaje;
         }
+
+        public string crearRegistroIngreso(ObjetoUsuario usuario)
+        {
+            String mensaje;
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = "INSERT INTO[dbo].[ingresos]([ing_cliente],[ing_fecha],[ing_hora]) VALUES(@Numero , CONVERT(Date, GETDATE()) , CONVERT(Time, GETDATE()))";
+            comando.Parameters.AddWithValue("@Numero", usuario.Numero);
+
+            try
+            {
+                if (conexion.State == ConnectionState.Closed)
+                {
+                    conexion.Open();
+                }
+                comando.ExecuteNonQuery();
+                conexion.Close();
+                mensaje = "Ingreso Completo.";
+
+            }
+            catch (SqlException e)
+            {
+                mensaje = e.Message.ToString();
+            }
+            return mensaje;
+        }
+
+        //INSERT INTO[dbo].[ingresos]([ing_cliente],[ing_fecha],[ing_hora]) VALUES(@Numero , CONVERT(Date, GETDATE()) , CONVERT(Time, GETDATE()))
 
         public BindingList<IngresosModel> verRegistros(ObjetoUsuario usuario)
         {
@@ -182,9 +252,11 @@ namespace GimnacioApp.Controller
                     Fecha = leerFilas.GetString(2),
                     Hora = leerFilas.GetString(3)
                 });
+                comando.Parameters.Clear();
             }
             leerFilas.Close();
             conexion.Close();
+            comando.Parameters.Clear();
 
             return listaProvisional;
         }

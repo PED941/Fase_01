@@ -86,8 +86,9 @@ namespace GimnacioApp
             this.textBoxBusqueda.ForeColor = System.Drawing.Color.Black;
             this.textBoxBusqueda.Location = new System.Drawing.Point(95, 9);
             this.textBoxBusqueda.Name = "textBoxBusqueda";
-            this.textBoxBusqueda.Size = new System.Drawing.Size(216, 20);
+            this.textBoxBusqueda.Size = new System.Drawing.Size(205, 20);
             this.textBoxBusqueda.TabIndex = 12;
+            this.textBoxBusqueda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxBusqueda_KeyPress);
             // 
             // panel2
             // 

@@ -19,16 +19,6 @@ namespace GimnacioApp
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Register_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void backbtn_Click(object sender, EventArgs e)
         {
             LogIN bienvenida = new LogIN();
