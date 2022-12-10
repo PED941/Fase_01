@@ -14,10 +14,11 @@ namespace GimnacioApp.Controller
     class UsuarioController : Conexion
     {
         //metodos crud
-        SqlDataReader leerFilas;
+        
         SqlCommand comando = new SqlCommand();
         public BindingList<ObjetoUsuario> verRegistros()
         {
+            SqlDataReader leerFilas;
             comando.Connection = conexion;
             comando.CommandText = "select [cli_numero],[cli_nombre],[cli_direccion],[cli_profesion] ,[cli_casa],[cli_trabajo],[cli_celular],[cli_nac],[cli_inscripcion],[cli_email],[cli_ingreso],[cli_pago],[cli_activo],[cli_diasextras] from [dbo].[cliente]";
 
@@ -26,7 +27,7 @@ namespace GimnacioApp.Controller
                 conexion.Open();
             }
 
-            leerFilas = comando.ExecuteReader();
+            leerFilas = (comando.ExecuteReader());
 
             BindingList<ObjetoUsuario> listaProvisional = new BindingList<ObjetoUsuario>();
             while (leerFilas.Read())
@@ -47,7 +48,9 @@ namespace GimnacioApp.Controller
                     Pago = leerFilas.GetString(11),
                     Activo = (bool)leerFilas.GetSqlBoolean(12),
                     DiasExtra = leerFilas.GetInt32(13)
+                    
                 });
+                comando.Parameters.Clear();
             }
             leerFilas.Close();
             conexion.Close();
@@ -157,8 +160,9 @@ namespace GimnacioApp.Controller
 
         public BindingList<IngresosModel> verRegistros(ObjetoUsuario usuario)
         {
+            SqlDataReader leerFilas;
             comando.Connection = conexion;
-            comando.CommandText = "select * from [dbo].[cliente] where cliente=@NumeroUsuario";
+            comando.CommandText = "select * from [dbo].[ingresos] where [ing_cliente]=@NumeroUsuario";
             comando.Parameters.AddWithValue("@NumeroUsuario", usuario.Numero);
 
             if (conexion.State == ConnectionState.Closed)
