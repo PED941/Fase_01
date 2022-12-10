@@ -32,3 +32,9 @@ E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\Gimnac
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\GimnacioApp.pdb
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.View.CrearAlumno.resources
 E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.csproj.AssemblyReference.cache
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\bin\Debug\Microsoft.SqlServer.Types.dll
+E:\Documentos\Student\PROGRAMACION CON ESTRUCTURA DE DATOS\FASE 1\Fase_01\GimnacioApp\obj\Debug\GimnacioApp.csproj.CopyComplete
