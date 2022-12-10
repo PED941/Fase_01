@@ -56,7 +56,6 @@ namespace GimnacioApp
             this.label1.Text = "¡Vamos a crear un nuevo usuario! \r\nPor favor, digite su nuevo usuario y contraseñ" +
     "a";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // newuser
             // 
@@ -193,7 +192,6 @@ namespace GimnacioApp
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Register";
-            this.Load += new System.EventHandler(this.Register_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
